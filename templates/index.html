@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Enrichment Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>Lead <span>Enrichment</span></h1>
+            <p>High-fidelity AI-driven email extraction.</p>
+        </header>
+
+        <main>
+            <form id="enrichment-form" class="glass-card">
+                <div class="input-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" required placeholder="e.g. Sam">
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" required placeholder="e.g. Altman">
+                </div>
+                <div class="input-group">
+                    <label for="domain">Company Domain</label>
+                    <input type="text" id="domain" required placeholder="e.g. openai.com">
+                </div>
+                <button type="submit" id="submit-btn">
+                    <span class="btn-text">Extract Intelligence</span>
+                    <div class="spinner hidden"></div>
+                </button>
+            </form>
+
+            <div id="results-container" class="glass-card hidden">
+                <div class="tier-badge" id="tier-badge">Tier 1 Success</div>
+                <h2>Extracted Emails</h2>
+                <div id="email-list" class="email-list">
+                    <!-- Emails injected via JS -->
+                </div>
+            </div>
+            
+            <div id="error-container" class="glass-card hidden error-card">
+                <h2>Error</h2>
+                <p id="error-msg"></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
